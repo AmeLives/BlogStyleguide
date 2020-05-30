@@ -1,0 +1,24 @@
+/* scss/atoms/_Colors.scss */
+$color_white: #ffffff;
+$color_grey-light: #F5F5F5;
+$color_blue: #022160;
+$color_orange: #DE6028;
+$color_black: #191919;
+
+.styleguide-box {
+    width: 30px;
+    height: 30px;
+}
+
+.bg--grey-light{
+    background: $color_grey-light;
+}
+.bg--blue {
+    background: $color_blue;
+}
+.bg--orange {
+    background: $color_orange;
+}
+.bg--black {
+    background: $color_black;
+}

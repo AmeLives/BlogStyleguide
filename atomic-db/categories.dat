@@ -1,0 +1,18 @@
+[
+    {
+        "category": "modules",
+        "order": 2
+    },
+    {
+        "category": "readme",
+        "order": 0
+    },
+    {
+        "category": "jsExample",
+        "order": 3
+    },
+    {
+        "category": "atoms",
+        "order": 1
+    }
+]
