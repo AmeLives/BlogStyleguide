@@ -1,0 +1,23 @@
+{
+  "name": "blog-styleguide",
+  "version": "1.0.0",
+  "description": "Styleguide based on Atomic Docs",
+  "main": "index.php",
+  "dependencies": {
+    "reset-css": "^5.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmeLives/BlogStyleguide.git"
+  },
+  "author": "Amelie Reiss",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AmeLives/BlogStyleguide/issues"
+  },
+  "homepage": "https://github.com/AmeLives/BlogStyleguide#readme"
+}

@@ -1,0 +1,9 @@
+/* scss/helper/_Sizes.scss */
+@each $name, $value in $sizes {
+  .height--#{$name} {
+      height: $value;
+  }
+  .width--#{$name} {
+      width: $value;
+  }
+}

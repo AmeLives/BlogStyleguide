@@ -1,0 +1,30 @@
+/* scss/atoms/_Listen.scss */
+.list--dots {
+    @extend .margin__bottom--small;
+    li {
+        padding-left: 20px;
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%); 
+            width: 3px;
+            height: 1px;
+            background: $color_black;
+        }
+    }
+} 
+
+.list--numbered {
+    @extend .margin__bottom--small;
+    counter-reset: list-counter;
+    li {
+        counter-increment: list-counter;
+        &:before {
+          content: counter(list-counter) ". ";
+          color: $primary;
+        }
+    }
+}

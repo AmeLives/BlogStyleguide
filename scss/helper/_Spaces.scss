@@ -1,0 +1,23 @@
+/* scss/helper/_Spaces.scss */
+@each $name, $value in $spacers {
+  .margin__bottom--#{$name} {
+      margin-bottom: $value;
+  }
+  .margin__top--#{$name} {
+      margin-bottom: $value;
+  }
+  
+  
+  .padding--#{$name} {
+      padding: $value; 
+  }
+  .padding__left-right--#{$name} {
+      padding-left: $value;
+      padding-right: $value;
+  }
+  .padding__top-bottom--#{$name} {
+      padding-top: $value;
+      padding-bottom: $value;
+  }
+  
+}

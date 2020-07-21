@@ -1,21 +1,548 @@
 /* scss/readme/_settings.scss */
 /* scss/readme/_sidebars.scss */
-/* scss/modules/_box.scss */
-.box {
-  background: #eee;
-  padding: 20px;
-  width: 300px;
-  height: 150px; }
+/* scss/readme/_reset.scss */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v5.0.1 | 20191019
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, menu, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+  display: block;
+}
+
+/* HTML5 hidden-attribute fix for newer browsers */
+*[hidden] {
+  display: none;
+}
+
+body {
+  line-height: 1;
+}
+
+menu, ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* scss/variables/_Colors.scss */
+/* scss/variables/_Spaces.scss */
+/* scss/variables/_Sizes.scss */
+/* scss/variables/_Links.scss */
+/* scss/mixins/_font-family.scss */
+/* scss/mixins/_section-headline.scss */
+/* scss/helper/_Colors.scss */
+.bg--primary {
+  background: #DE6028;
+}
+
+.color--primary {
+  color: #DE6028;
+}
+
+.bg--secondary {
+  background: #022160;
+}
+
+.color--secondary {
+  color: #022160;
+}
+
+.bg--success {
+  background: #7FC33C;
+}
+
+.color--success {
+  color: #7FC33C;
+}
+
+.bg--info {
+  background: #DE6028;
+}
+
+.color--info {
+  color: #DE6028;
+}
+
+.bg--warning {
+  background: F0C947;
+}
+
+.color--warning {
+  color: F0C947;
+}
+
+.bg--danger {
+  background: #6E2708;
+}
+
+.color--danger {
+  color: #6E2708;
+}
+
+.bg--light {
+  background: #F5F5F5;
+}
+
+.color--light {
+  color: #F5F5F5;
+}
+
+.bg--dark {
+  background: #3B3B3B;
+}
+
+.color--dark {
+  color: #3B3B3B;
+}
+
+.bg--white {
+  background: #ffffff;
+}
+
+.color--white {
+  color: #ffffff;
+}
+
+.bg--black {
+  background: #191919;
+}
+
+.color--black {
+  color: #191919;
+}
+
+.bg--mark {
+  background: #FFFF00;
+}
+
+.color--mark {
+  color: #FFFF00;
+}
+
+/* scss/helper/_Spaces.scss */
+.margin__bottom--none {
+  margin-bottom: 0;
+}
+
+.margin__top--none {
+  margin-bottom: 0;
+}
+
+.padding--none {
+  padding: 0;
+}
+
+.padding__left-right--none {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.padding__top-bottom--none {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.margin__bottom--extra-small {
+  margin-bottom: 0.25rem;
+}
+
+.margin__top--extra-small {
+  margin-bottom: 0.25rem;
+}
+
+.padding--extra-small {
+  padding: 0.25rem;
+}
+
+.padding__left-right--extra-small {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.padding__top-bottom--extra-small {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.margin__bottom--small, .list--numbered, .list--dots {
+  margin-bottom: 0.5rem;
+}
+
+.margin__top--small {
+  margin-bottom: 0.5rem;
+}
+
+.padding--small {
+  padding: 0.5rem;
+}
+
+.padding__left-right--small {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.padding__top-bottom--small {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.margin__bottom--medium, .hl-5, .hl-4 {
+  margin-bottom: 1rem;
+}
+
+.margin__top--medium {
+  margin-bottom: 1rem;
+}
+
+.padding--medium {
+  padding: 1rem;
+}
+
+.padding__left-right--medium {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.padding__top-bottom--medium {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.margin__bottom--large, .hl-3, .button, .hl-2, .hl-1 {
+  margin-bottom: 1.5rem;
+}
+
+.margin__top--large {
+  margin-bottom: 1.5rem;
+}
+
+.padding--large {
+  padding: 1.5rem;
+}
+
+.padding__left-right--large {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.padding__top-bottom--large {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.margin__bottom--extra-large {
+  margin-bottom: 3rem;
+}
+
+.margin__top--extra-large {
+  margin-bottom: 3rem;
+}
+
+.padding--extra-large {
+  padding: 3rem;
+}
+
+.padding__left-right--extra-large {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.padding__top-bottom--extra-large {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* scss/helper/_Grid.scss */
+.flex-row {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+/* scss/helper/_Sizes.scss */
+.height--25 {
+  height: 25%;
+}
+
+.width--25 {
+  width: 25%;
+}
+
+.height--50 {
+  height: 50%;
+}
+
+.width--50 {
+  width: 50%;
+}
+
+.height--75 {
+  height: 75%;
+}
+
+.width--75 {
+  width: 75%;
+}
+
+.height--100 {
+  height: 100%;
+}
+
+.width--100 {
+  width: 100%;
+}
+
+.height--auto {
+  height: auto;
+}
+
+.width--auto {
+  width: auto;
+}
+
+/* scss/atoms/_Links.scss */
+.link {
+  color: #DE6028;
+  text-decoration: none;
+}
+.link:hover {
+  color: #a14319;
+  text-decoration: underline;
+}
+
+/* scss/atoms/_Typographie.scss */
+body {
+  font-size: 17px;
+}
+
+.section-headline {
+  border-bottom: 1px solid #191919;
+  min-width: 150px;
+  max-width: calc( 100% + 50px);
+}
+.section-headline span {
+  position: relative;
+}
+.section-headline span:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  left: 0;
+  bottom: -3px;
+  background: #191919;
+}
+
+.hl-1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 26px;
+}
+.hl-1 strong, .hl-1 b {
+  font-weight: 400;
+}
+.hl-1 em, .hl-1 i {
+  font-style: italic;
+}
+
+.hl-2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 26px;
+}
+.hl-2 strong, .hl-2 b {
+  font-weight: 400;
+}
+.hl-2 em, .hl-2 i {
+  font-style: italic;
+}
+
+.hl-3, .button {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  text-transform: uppercase;
+  font-size: 15px;
+  line-height: 22px;
+}
+.hl-3 strong, .button strong, .hl-3 b, .button b {
+  font-weight: 300;
+}
+.hl-3 em, .button em, .hl-3 i, .button i {
+  font-style: italic;
+}
+
+.hl-4 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 17px;
+  line-height: 19px;
+}
+.hl-4 strong, .hl-4 b {
+  font-weight: 300;
+}
+.hl-4 em, .hl-4 i {
+  font-style: italic;
+}
+
+.hl-5 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 19px;
+}
+.hl-5 strong, .hl-5 b {
+  font-weight: 500;
+}
+.hl-5 em, .hl-5 i {
+  font-style: italic;
+}
+
+.p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 22px;
+}
+.p strong, .p b {
+  font-weight: 400;
+}
+.p em, .p i {
+  font-style: italic;
+}
+
+sub, sup {
+  position: relative;
+  font-size: 0.8rem;
+}
+
+sub {
+  top: 0.4rem;
+}
+
+sup {
+  top: -0.4rem;
+}
+
+mark, .mark {
+  background-color: #FFFF00;
+  color: #191919;
+}
+
+code, .code, samp, .samp, .output {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 300;
+}
+code strong, code b, .code strong, .code b, samp strong, samp b, .samp strong, .samp b, .output strong, .output b {
+  font-weight: 400;
+}
+code em, code i, .code em, .code i, samp em, samp i, .samp em, .samp i, .output em, .output i {
+  font-style: italic;
+}
+
+/* scss/atoms/_Colors.scss */
+.styleguide-box {
+  width: 80px;
+  height: 80px;
+}
+.styleguide-box--small {
+  width: 50px;
+  height: 50px;
+}
+
+/* scss/atoms/_Listen.scss */
+.list--dots li {
+  padding-left: 20px;
+  position: relative;
+}
+.list--dots li:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 1px;
+  background: #191919;
+}
+
+.list--numbered {
+  counter-reset: list-counter;
+}
+.list--numbered li {
+  counter-increment: list-counter;
+}
+.list--numbered li:before {
+  content: counter(list-counter) ". ";
+  color: #DE6028;
+}
+
+/* scss/atoms/_Buttons.scss */
+.button {
+  padding: 5px 10px 5px 10px;
+  border: 1px solid #191919;
+  cursor: pointer;
+}
+.button:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
 
 /* scss/jsExample/_clickme.scss */
 .click {
   cursor: pointer;
   position: relative;
   left: 0;
-  transition: left .25s;
+  transition: left 0.25s;
   background: #ccf9bf;
   padding: 20px 40px;
-  display: inline-block; }
+  display: inline-block;
+}
 
 .clickAnimate {
-  left: 80%; }
+  left: 80%;
+}
+
+
+
+
+/*# sourceMappingURL=main.css.map */

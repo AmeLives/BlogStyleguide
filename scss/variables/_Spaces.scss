@@ -1,0 +1,14 @@
+/* scss/variables/_Spaces.scss */
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge(
+  (
+    none: 0,
+    extra-small: ($spacer * .25),
+    small: ($spacer * .5),
+    medium: $spacer,
+    large: ($spacer * 1.5),
+    extra-large: ($spacer * 3)
+  ),
+  $spacers
+);

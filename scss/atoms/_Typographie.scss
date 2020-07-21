@@ -1,0 +1,72 @@
+/* scss/atoms/_Typographie.scss */
+body {
+    font-size: 17px;
+}
+
+.section-headline {
+    @include section-headline;
+}
+
+.hl-1 {
+    @include font-family('Roboto', 'light');
+    font-size: 30px;
+    line-height: 26px;
+    @extend .margin__bottom--large;
+}
+
+.hl-2 {
+    @include font-family('Roboto', 'light');
+    font-size: 24px;
+    line-height: 26px;
+    @extend .margin__bottom--large;
+}
+
+.hl-3 {
+    @include font-family('Roboto', 'thin');
+    text-transform: uppercase;
+    font-size: 15px;
+    line-height: 22px;
+    @extend .margin__bottom--large;
+}
+
+.hl-4 {
+    @include font-family('Roboto', 'thin');
+    font-size: 17px;
+    line-height: 19px;
+    @extend .margin__bottom--medium;
+}
+
+.hl-5 {
+    @include font-family('Roboto', 'regular');
+    font-size: 17px;
+    line-height: 19px;
+    @extend .margin__bottom--medium;
+}
+
+.p {
+   @include font-family('Roboto', 'light'); 
+   font-size: 17px;
+   line-height: 22px;
+}
+
+sub, sup {
+  position: relative;
+  font-size: 0.8rem;
+}
+
+sub {
+    top: 0.4rem;
+}
+
+sup {
+    top: -0.4rem; 
+}
+
+mark, .mark {
+    background-color: $color_neon-yellow;
+    color: $color_black;
+}
+
+code, .code, samp, .samp, .output {
+   @include font-family('Roboto Mono', 'light');  
+}

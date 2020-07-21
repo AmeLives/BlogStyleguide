@@ -1,0 +1,44 @@
+/* scss/atoms/_Links.scss */
+.link {
+    color: $link-color;
+    text-decoration: $link-decoration;
+    display: inline;
+    @include section-headline;
+    &:after {
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s ease all;
+    }
+    &:hover {
+        color: $link-color;
+        &:after {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+.tag {
+    @extend .link;
+    @extend .hl-4;
+    padding-left: 11px;
+    position: relative;
+    &:before {
+        content : '#';
+        position: absolute;
+        left: 0;
+    }
+}
+
+.menu-link {
+    @extend .link;
+    @extend .hl-3;
+    @include font-family('Roboto', 'light');
+    &.current {
+      &:after {
+          background-color: $primary;
+          opacity: 1;
+          visibility: visible;
+      }
+    }
+}

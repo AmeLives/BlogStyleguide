@@ -1,0 +1,9 @@
+/* scss/helper/_Colors.scss */
+@each $name, $value in $theme-colors {
+  .bg--#{$name} {
+      background: $value;
+  }
+  .color--#{$name} {
+      color: $value;
+  }
+}

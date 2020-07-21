@@ -1,0 +1,46 @@
+/* scss/variables/_Colors.scss */
+$color_white: #ffffff;
+$color_grey-light: #F5F5F5;
+$color_grey: #7C7C7C;
+$color_grey-dark: #3B3B3B;
+$color_blue: #022160;
+$color_orange: #DE6028;
+$color_black: #191919;
+
+$color_green: #7FC33C;
+$color_red: #6E2708;
+$color_yellow: F0C947;
+$color_neon-yellow: #FFFF00;
+
+$primary:       $color_orange !default;
+$secondary:     $color_blue !default;
+$success:       $color_green !default;
+$info:          $color_orange !default;
+$warning:       $color_yellow !default;
+$danger:        $color_red !default;
+$light:         $color_grey-light !default;
+$dark:          $color_grey-dark !default;
+$marker:        $color_neon-yellow !default;
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $dark,
+    "white":      $color_white,
+    "black":      $color_black,
+    "mark":       $color_neon-yellow
+  ),
+  $theme-colors
+);
+
+$color_button: $primary;
+$color_button-secondary: $secondary;
+$color_button-disabled: $color_grey;
+$color_button-hover: rgba(0,0,0,0.03);

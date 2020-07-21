@@ -1,7 +1,7 @@
 [
     {
         "category": "modules",
-        "order": 2
+        "order": 5
     },
     {
         "category": "readme",
@@ -9,10 +9,22 @@
     },
     {
         "category": "jsExample",
-        "order": 3
+        "order": 6
     },
     {
         "category": "atoms",
+        "order": 4
+    },
+    {
+        "category": "variables",
         "order": 1
+    },
+    {
+        "category": "mixins",
+        "order": 2
+    },
+    {
+        "category": "helper",
+        "order": 3
     }
 ]

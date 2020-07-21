@@ -1,0 +1,68 @@
+/* scss/atoms/_Buttons.scss */
+@mixin button-border {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 10px;
+    height: 100%;
+    border: 1px solid $color_button;
+}
+
+.button {
+    padding: 5px 10px 5px 10px;
+    display: inline-block;
+    cursor: pointer;
+    @extend .hl-3;
+    position: relative;
+    transition: background 0.2s ease;
+    border: none;
+    &:before {
+        @include button-border;
+        border-right: 0 !important;
+        left: 0;
+    }
+    &:after {
+        @include button-border;
+        border-left: 0 !important;
+        right: 0;
+    }
+    &:focus {
+        outline: none;
+    }
+    
+    
+    &--primary {
+        color: $color_button;
+        background: transparent;
+        &:before, &:after {
+            border: 1px solid $color_button;
+        }
+        &:hover {
+            background: $color_button-hover;
+        }
+    }
+    
+    &--secondary {
+        color: $color_button-secondary;
+        background: transparent;
+        &:before, &:after {
+            border: 1px solid $color_button-secondary;
+        }
+        &:hover {
+            background: $color_button-hover;
+        }        
+    }
+    &.disabled, &:disabled {
+        color: $color_button-disabled;
+        border: none;
+        background: transparent;
+        cursor: not-allowed;
+        &:before, &:after {
+            border: 1px solid $color_button-disabled;
+        }
+        &:hover {
+            background: transparent;
+            cursor: not-allowed;
+        }  
+    }
+}
