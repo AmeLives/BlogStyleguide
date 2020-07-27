@@ -62,6 +62,8 @@ table {
   border-spacing: 0;
 }
 
+/* scss/variables/_Sizes.scss */
+/* scss/variables/_Spaces.scss */
 /* scss/variables/_Colors.scss */
 :root {
   --color-primary: #DE6028;
@@ -79,9 +81,12 @@ table {
   --color-link-hover: #a14319;
 }
 
-/* scss/variables/_Spaces.scss */
-/* scss/variables/_Sizes.scss */
-/* scss/variables/_Links.scss */
+/* scss/variables/_Grid.scss */
+:root {
+  --gutter: 30px;
+  --cols: 12;
+}
+
 /* scss/mixins/_font-family.scss */
 /* scss/mixins/_section-headline.scss */
 /* scss/helper/_Colors.scss */
@@ -262,7 +267,7 @@ table {
   padding-bottom: 1rem;
 }
 
-.margin__bottom--large, .hl-3, .menu-link, .menu__list-item span, .button, .hl-2, .hl-1, .tag {
+.margin__bottom--large, .hl-3, .gallery__description, .menu-link, .menu__list-item span, .button, .hl-2, .hl-1, .tag {
   margin-bottom: 1.5rem;
 }
 
@@ -393,7 +398,7 @@ body {
   background: var(--color-black);
 }
 
-.hl-5, .hl-4, .hl-3, .menu-link, .menu__list-item span, .button, .hl-2, .hl-1, .tag {
+.hl-5, .hl-4, .hl-3, .gallery__description, .menu-link, .menu__list-item span, .button, .hl-2, .hl-1, .tag {
   font-size: var(--headline-font-size);
   line-height: var(--headline-line-height);
   color: var(--headline-color);
@@ -423,17 +428,17 @@ body {
   font-style: italic;
 }
 
-.hl-3, .menu-link, .menu__list-item span, .button {
+.hl-3, .gallery__description, .menu-link, .menu__list-item span, .button {
   --headline-font-size: 15px;
   --headline-line-height: 22px;
   font-family: "Roboto", sans-serif;
   font-weight: 100;
   text-transform: uppercase;
 }
-.hl-3 strong, .menu-link strong, .menu__list-item span strong, .button strong, .hl-3 b, .menu-link b, .menu__list-item span b, .button b {
+.hl-3 strong, .gallery__description strong, .menu-link strong, .menu__list-item span strong, .button strong, .hl-3 b, .gallery__description b, .menu-link b, .menu__list-item span b, .button b {
   font-weight: 300;
 }
-.hl-3 em, .menu-link em, .menu__list-item span em, .button em, .hl-3 i, .menu-link i, .menu__list-item span i, .button i {
+.hl-3 em, .gallery__description em, .menu-link em, .menu__list-item span em, .button em, .hl-3 i, .gallery__description i, .menu-link i, .menu__list-item span i, .button i {
   font-style: italic;
 }
 
@@ -469,17 +474,17 @@ body {
   --texte-color: var(--color-black);
 }
 
-.p, .list--numbered li, .list--dots li, code, .code, samp, .samp, .output, mark, .mark, sub, sup {
+.p, .figure__description, .list--numbered li, .list--dots li, code, .code, samp, .samp, .output, mark, .mark, sub, sup {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-size: var(--text-font-size);
   line-height: var(--text-line-height);
   color: var(--texte-color);
 }
-.p strong, .list--numbered li strong, .list--dots li strong, code strong, .code strong, samp strong, .samp strong, .output strong, mark strong, .mark strong, sub strong, sup strong, .p b, .list--numbered li b, .list--dots li b, code b, .code b, samp b, .samp b, .output b, mark b, .mark b, sub b, sup b {
+.p strong, .figure__description strong, .list--numbered li strong, .list--dots li strong, code strong, .code strong, samp strong, .samp strong, .output strong, mark strong, .mark strong, sub strong, sup strong, .p b, .figure__description b, .list--numbered li b, .list--dots li b, code b, .code b, samp b, .samp b, .output b, mark b, .mark b, sub b, sup b {
   font-weight: 400;
 }
-.p em, .list--numbered li em, .list--dots li em, code em, .code em, samp em, .samp em, .output em, mark em, .mark em, sub em, sup em, .p i, .list--numbered li i, .list--dots li i, code i, .code i, samp i, .samp i, .output i, mark i, .mark i, sub i, sup i {
+.p em, .figure__description em, .list--numbered li em, .list--dots li em, code em, .code em, samp em, .samp em, .output em, mark em, .mark em, sub em, sup em, .p i, .figure__description i, .list--numbered li i, .list--dots li i, code i, .code i, samp i, .samp i, .output i, mark i, .mark i, sub i, sup i {
   font-style: italic;
 }
 
@@ -536,10 +541,10 @@ code em, code i, .code em, .code i, samp em, samp i, .samp em, .samp i, .output 
   display: inline-block;
   cursor: pointer;
   position: relative;
-  transition: background 0.2s ease;
+  transition: background-color 0.2s ease;
   border: none;
   color: var(--button-color);
-  background: var(--button-background-color);
+  background-color: var(--button-background-color);
 }
 .button:before {
   content: "";
@@ -550,6 +555,7 @@ code em, code i, .code em, .code i, samp em, samp i, .samp em, .samp i, .output 
   border: 1px solid var(--button-border);
   border-right: 0 !important;
   left: 0;
+  border: 1px solid var(--button-border);
 }
 .button:after {
   content: "";
@@ -560,15 +566,13 @@ code em, code i, .code em, .code i, samp em, samp i, .samp em, .samp i, .output 
   border: 1px solid var(--button-border);
   border-left: 0 !important;
   right: 0;
+  border: 1px solid var(--button-border);
 }
 .button:focus {
   outline: none;
 }
-.button:before, .button:after {
-  border: 1px solid var(--button-border);
-}
 .button:hover {
-  background: var(--button-background-color-hover);
+  background-color: var(--button-background-color-hover);
 }
 .button:hover:before, .button:hover:after {
   border: 1px solid var(--button-border-hover);
@@ -687,6 +691,109 @@ code em, code i, .code em, .code i, samp em, samp i, .samp em, .samp i, .output 
 }
 .menu__list li, .tag-list li {
   margin-left: 20px;
+}
+
+/* scss/atoms/_figures.scss */
+:root {
+  --figure-description-bottom: 10px;
+}
+
+.figure {
+  position: relative;
+}
+.figure__image {
+  width: 100%;
+  max-width: 100%;
+}
+.figure__description {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  background-color: var(--color-white);
+  padding: 8px;
+  max-width: 85%;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: var(--figure-description-bottom);
+  --button-border: var(--color-black);
+  --button-border-hover: var(--color-black);
+}
+.figure__description strong, .figure__description b {
+  font-weight: 300;
+}
+.figure__description em, .figure__description i {
+  font-style: italic;
+}
+.figure__description:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 100%;
+  border: 1px solid var(--button-border);
+  border-right: 0 !important;
+  left: 0;
+  border: 1px solid var(--button-border);
+}
+.figure__description:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 100%;
+  border: 1px solid var(--button-border);
+  border-left: 0 !important;
+  right: 0;
+  border: 1px solid var(--button-border);
+}
+.figure__description:before, .figure__description:after {
+  width: 25px;
+}
+
+:root {
+  --gallery-gutter: var(--gutter, 30px);
+  --gallery-spacer: 10px;
+}
+
+.gallery {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-flow: row wrap;
+  margin-left: calc(-1 * var(--gallery-gutter));
+}
+.gallery__description {
+  margin-bottom: 10px;
+  width: 100%;
+  margin-left: var(--gallery-gutter);
+}
+.gallery .figure {
+  margin-left: var(--gallery-gutter);
+  margin-bottom: var(--gallery-gutter);
+}
+.gallery[data-cols="2"][data-total="1"], .gallery[data-cols="2"][data-total="2"] {
+  --gallery-gutter: 15px;
+}
+.gallery[data-cols="2"] .figure {
+  width: calc(100% / 2 - var(--gallery-gutter));
+}
+.gallery[data-cols="3"][data-total="1"], .gallery[data-cols="3"][data-total="2"], .gallery[data-cols="3"][data-total="3"] {
+  --gallery-gutter: 15px;
+}
+.gallery[data-cols="3"] .figure {
+  width: calc(100% / 3 - var(--gallery-gutter));
+}
+.gallery[data-cols="4"] {
+  --gallery-gutter: 15px;
+  --gallery-spacer: 15px;
+}
+.gallery[data-cols="4"][data-total="1"], .gallery[data-cols="4"][data-total="2"], .gallery[data-cols="4"][data-total="3"], .gallery[data-cols="4"][data-total="4"] {
+  --gallery-gutter: 15px;
+}
+.gallery[data-cols="4"] .figure {
+  width: calc(100% / 4 - var(--gallery-gutter));
 }
 
 /* scss/modules/_menu.scss */

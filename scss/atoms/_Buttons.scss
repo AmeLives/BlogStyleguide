@@ -15,34 +15,41 @@
     border: 1px solid var(--button-border);
 }
 
+@mixin button-border--left {
+    &:before {
+        @include button-border;
+        border-right: 0 !important;
+        left: 0;
+        border: 1px solid var(--button-border);
+    }
+}
+
+@mixin button-border--right {
+    &:after {
+        @include button-border;
+        border-left: 0 !important;
+        right: 0;
+        border: 1px solid var(--button-border);
+    }
+}
+
 .button {
     padding: 5px 10px 5px 10px;
     display: inline-block;
     cursor: pointer;
     @extend .hl-3;
     position: relative;
-    transition: background 0.2s ease;
+    transition: background-color 0.2s ease;
     border: none;
     color: var(--button-color);
-    background: var(--button-background-color);
-    &:before {
-        @include button-border;
-        border-right: 0 !important;
-        left: 0;
-    }
-    &:after {
-        @include button-border;
-        border-left: 0 !important;
-        right: 0;
-    }
+    background-color: var(--button-background-color);
+    @include button-border--left;
+    @include button-border--right;
     &:focus {
         outline: none;
     }
-    &:before, &:after {
-        border: 1px solid var(--button-border);
-    }
     &:hover {
-        background: var(--button-background-color-hover);
+        background-color: var(--button-background-color-hover);
         &:before, &:after {
             border: 1px solid var(--button-border-hover);
         }

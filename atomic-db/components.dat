@@ -28,7 +28,7 @@
         "category": "atoms",
         "description": "Farben der Blogumgebung",
         "backgroundColor": "",
-        "order": 1,
+        "order": 2,
         "has_js": "true"
     },
     {
@@ -84,7 +84,7 @@
         "category": "helper",
         "description": "",
         "backgroundColor": "",
-        "order": -9,
+        "order": 3,
         "has_js": "false"
     },
     {
@@ -108,7 +108,7 @@
         "category": "variables",
         "description": "",
         "backgroundColor": "",
-        "order": -12,
+        "order": 0,
         "has_js": "false"
     },
     {
@@ -149,6 +149,22 @@
         "description": "",
         "backgroundColor": "",
         "order": -17,
+        "has_js": "false"
+    },
+    {
+        "component": "figures",
+        "category": "atoms",
+        "description": "",
+        "backgroundColor": "",
+        "order": 5,
+        "has_js": "false"
+    },
+    {
+        "component": "Grid",
+        "category": "variables",
+        "description": "",
+        "backgroundColor": "",
+        "order": -19,
         "has_js": "false"
     }
 ]
