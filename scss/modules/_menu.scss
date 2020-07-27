@@ -1,0 +1,64 @@
+/* scss/modules/_menu.scss */
+.menu {
+    &__list {
+        @extend %list--inline-items;
+        
+        &--sub-menu {
+            opacity: 0;
+            visibility: hidden;
+            display: none;
+        }
+        
+    }
+    &__list-item {
+        position: relative;
+        @include section-headline;
+        min-width: auto;
+        &:before {
+            transition: width 0.2s ease;
+            width: 0;  
+        }
+        span {
+            @extend .menu-link;
+            &:after {
+                transition: width 0.2s ease;
+                transition-delay: 0.1s;
+                width: 0;
+            }
+        }
+        &:hover {
+            &:before {
+                width: 100%;
+            }
+            span {
+                &:after {
+                    width: 25%;
+                }
+            }
+        }
+        &.current {
+            &:before {
+                background-color: var(--color-primary);
+            }
+            span {
+                &:after {
+                    transition-delay: 0.1s;
+                    width: 15%;
+                    background-color: var(--color-primary);
+                }
+            }
+            & > .menu__list--sub-menu {
+                opacity: 1;
+                visibility: visible;
+                display: block;
+            }
+            &:hover {
+                span {
+                    &:after {
+                        width: 25%;
+                    }
+                }
+            }
+        }
+    }
+}

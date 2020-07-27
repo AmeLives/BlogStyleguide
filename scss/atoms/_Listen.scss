@@ -1,30 +1,52 @@
 /* scss/atoms/_Listen.scss */
-.list--dots {
-    @extend .margin__bottom--small;
+%list {
+    @extend .margin__bottom--medium;
+    @extend .margin__top--medium;
     li {
-        padding-left: 20px;
+        @extend .p;
+    }
+}
+.list--dots {
+    @extend %list;
+    li {
+        padding-left: 13px;
         position: relative;
         &:before {
             content: '';
             position: absolute;
             left: 0;
-            top: 50%;
-            transform: translateY(-50%); 
+            top: 0.5em;
             width: 3px;
             height: 1px;
-            background: $color_black;
+            background: var(--color-secondary);
         }
     }
+    
 } 
 
 .list--numbered {
-    @extend .margin__bottom--small;
+    @extend %list;
     counter-reset: list-counter;
-    li {
+     li {
         counter-increment: list-counter;
         &:before {
           content: counter(list-counter) ". ";
-          color: $primary;
+          color: var(--color-secondary);
+        }
+        ol {
+         margin-left: 10px;   
         }
     }
+}
+
+%list--inline-items {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+    margin-left: -20px;
+    li {
+        margin-left: 20px;
+    }
+    @extend .margin__bottom--small;
 }

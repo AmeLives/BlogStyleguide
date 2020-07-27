@@ -1,4 +1,10 @@
 /* scss/atoms/_Typographie.scss */
+:root {
+    --headline-font-size: 30px;
+    --headline-line-height: 26px;
+    --headline-color: var(--color-black);
+} 
+
 body {
     font-size: 17px;
 }
@@ -7,51 +13,68 @@ body {
     @include section-headline;
 }
 
+%hl {
+    font-size: var(--headline-font-size);
+    line-height: var(--headline-line-height);
+    color: var(--headline-color);
+}
+
 .hl-1 {
     @include font-family('Roboto', 'light');
-    font-size: 30px;
-    line-height: 26px;
+    @extend %hl;
     @extend .margin__bottom--large;
 }
 
 .hl-2 {
+    --headline-font-size: 24px;
+    --headline-line-height: 26px;
     @include font-family('Roboto', 'light');
-    font-size: 24px;
-    line-height: 26px;
+    @extend %hl;
     @extend .margin__bottom--large;
 }
 
 .hl-3 {
+    --headline-font-size: 15px;
+    --headline-line-height: 22px;
     @include font-family('Roboto', 'thin');
     text-transform: uppercase;
-    font-size: 15px;
-    line-height: 22px;
+    @extend %hl;
     @extend .margin__bottom--large;
 }
 
 .hl-4 {
+    --headline-font-size: 17px;
+    --headline-line-height: 19px;
     @include font-family('Roboto', 'thin');
-    font-size: 17px;
-    line-height: 19px;
+    @extend %hl;
     @extend .margin__bottom--medium;
 }
 
 .hl-5 {
+    --headline-font-size: 17px;
+    --headline-line-height: 19px;
     @include font-family('Roboto', 'regular');
-    font-size: 17px;
-    line-height: 19px;
+    @extend %hl;
     @extend .margin__bottom--medium;
 }
 
+:root {
+    --text-font-size: 16px;
+    --text-line-height: 20px;
+    --texte-color: var(--color-black);
+} 
+
 .p {
    @include font-family('Roboto', 'light'); 
-   font-size: 17px;
-   line-height: 22px;
+   font-size: var(--text-font-size);
+   line-height: var(--text-line-height);
+   color: var(--texte-color);
 }
 
 sub, sup {
-  position: relative;
-  font-size: 0.8rem;
+    --text-font-size: 0.8rem;
+    @extend .p;
+    position: relative;
 }
 
 sub {
@@ -63,10 +86,12 @@ sup {
 }
 
 mark, .mark {
-    background-color: $color_neon-yellow;
-    color: $color_black;
+    @extend .p;
+    background-color: var(--color-marker);
+    color: var(--color-black);
 }
 
 code, .code, samp, .samp, .output {
-   @include font-family('Roboto Mono', 'light');  
+    @extend .p;
+    @include font-family('Roboto Mono', 'light');  
 }

@@ -20,7 +20,15 @@
 </div>
 
 <div class="margin__bottom--large">
+    <ul class="tag-list">
+        <li><a href="" class="tag">Development</a></li>
+        <li><a href="" class="tag">Projektmanagement</a></li>
+        <li><a href="" class="tag">Meetings</a></li>
+    </ul>
+</div>
+
+<div class="margin__bottom--large">
     <a href="" class="menu-link current">Menu Link</a>
     <a href="" class="menu-link">Menu Link</a>
     <a href="" class="menu-link">Menu Link</a>
-</div
+</div>

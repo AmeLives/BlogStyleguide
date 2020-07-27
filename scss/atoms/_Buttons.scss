@@ -1,11 +1,18 @@
 /* scss/atoms/_Buttons.scss */
+:root {
+    --button-color: #DE6028;
+    --button-border:#DE6028;
+    --button-border-hover: #DE6028;
+    --button-background-color: transparent;
+    --button-background-color-hover: rgba(0,0,0,0.03);
+}
 @mixin button-border {
     content: '';
     position: absolute;
     top: 0;
     width: 10px;
     height: 100%;
-    border: 1px solid $color_button;
+    border: 1px solid var(--button-border);
 }
 
 .button {
@@ -16,6 +23,8 @@
     position: relative;
     transition: background 0.2s ease;
     border: none;
+    color: var(--button-color);
+    background: var(--button-background-color);
     &:before {
         @include button-border;
         border-right: 0 !important;
@@ -29,40 +38,38 @@
     &:focus {
         outline: none;
     }
+    &:before, &:after {
+        border: 1px solid var(--button-border);
+    }
+    &:hover {
+        background: var(--button-background-color-hover);
+        &:before, &:after {
+            border: 1px solid var(--button-border-hover);
+        }
+    }
+    &.disabled, &:disabled {
+        --button-color: #7C7C7C;
+        --button-border:#7C7C7C;
+        --button-border-hover: #7C7C7C;
+        --button-background-color: transparent;
+        --button-background-color-hover: transparent;
+        border: none;
+        cursor: default;
+        &:hover {
+            cursor: default;
+        }  
+    }
     
     
     &--primary {
-        color: $color_button;
-        background: transparent;
-        &:before, &:after {
-            border: 1px solid $color_button;
-        }
-        &:hover {
-            background: $color_button-hover;
-        }
+        --button-color: var(--color-black);
+        --button-border: var(--color-black);
+        --button-border-hover: var(--color-primary);
     }
     
     &--secondary {
-        color: $color_button-secondary;
-        background: transparent;
-        &:before, &:after {
-            border: 1px solid $color_button-secondary;
-        }
-        &:hover {
-            background: $color_button-hover;
-        }        
-    }
-    &.disabled, &:disabled {
-        color: $color_button-disabled;
-        border: none;
-        background: transparent;
-        cursor: not-allowed;
-        &:before, &:after {
-            border: 1px solid $color_button-disabled;
-        }
-        &:hover {
-            background: transparent;
-            cursor: not-allowed;
-        }  
+        --button-color: var(--color-dark);
+        --button-border: var(--color-dark);
+        --button-border-hover: var(--color-secondary);     
     }
 }

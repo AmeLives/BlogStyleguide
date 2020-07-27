@@ -1,16 +1,15 @@
 /* scss/atoms/_Links.scss */
 .link {
-    color: $link-color;
-    text-decoration: $link-decoration;
+    color: var(--color-link);
+    text-decoration: none;
     display: inline;
-    @include section-headline;
     &:after {
         opacity: 0;
         visibility: hidden;
         transition: 0.3s ease all;
     }
     &:hover {
-        color: $link-color;
+        color: var(--color-link-hover);
         &:after {
             opacity: 1;
             visibility: visible;
@@ -18,11 +17,29 @@
     }
 }
 
-.tag {
+%link--thin {
+    --color-link: var(--text-color);
+    --color-link-hover: var(--color-primary);
     @extend .link;
-    @extend .hl-4;
-    padding-left: 11px;
     position: relative;
+    @include font-family('Roboto', 'thin');
+}
+
+%clear-link {
+    --color-link: inherit;
+    --color-link-hover: inherit;
+    text-decoration: none;
+    border: none;
+    &:hover {
+        text-decoration: none;
+        border: none;
+    }
+}
+
+.tag {
+    @extend .hl-1;
+    @extend %link--thin;
+    padding-left: 19px;
     &:before {
         content : '#';
         position: absolute;
@@ -30,15 +47,11 @@
     }
 }
 
+.tag-list {
+   @extend %list--inline-items;
+}
+
 .menu-link {
-    @extend .link;
     @extend .hl-3;
-    @include font-family('Roboto', 'light');
-    &.current {
-      &:after {
-          background-color: $primary;
-          opacity: 1;
-          visibility: visible;
-      }
-    }
+    @extend %clear-link;
 }

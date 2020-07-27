@@ -5,19 +5,11 @@
     <li>Ich bin ein Listen-Element</li>
     <li>
         Ich bin ein Listen-Element
-        <ul class="list--dots">
+        <ul>
             <li>Ich bin ein Listen-Element</li>
             <li>Ich bin ein Listen-Element</li>
             <li>Ich bin ein Listen-Element</li>
         </ul>
-    </li>
-    <li>
-        Ich bin ein Listen-Element
-        <ol class="list--numbered">
-            <li>Ich bin ein Listen-Element</li>
-            <li>Ich bin ein Listen-Element</li>
-            <li>Ich bin ein Listen-Element</li>
-        </ol>
     </li>
 </ul>
 
@@ -27,15 +19,7 @@
     <li>Ich bin ein Listen-Element</li>
     <li>
         Ich bin ein Listen-Element
-        <ul class="list--dots">
-            <li>Ich bin ein Listen-Element</li>
-            <li>Ich bin ein Listen-Element</li>
-            <li>Ich bin ein Listen-Element</li>
-        </ul>
-    </li>
-    <li>
-        Ich bin ein Listen-Element
-        <ol class="list--numbered">
+        <ol>
             <li>Ich bin ein Listen-Element</li>
             <li>Ich bin ein Listen-Element</li>
             <li>Ich bin ein Listen-Element</li>

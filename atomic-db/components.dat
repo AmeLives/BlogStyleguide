@@ -28,7 +28,7 @@
         "category": "atoms",
         "description": "Farben der Blogumgebung",
         "backgroundColor": "",
-        "order": 2,
+        "order": 1,
         "has_js": "true"
     },
     {
@@ -36,7 +36,7 @@
         "category": "atoms",
         "description": "",
         "backgroundColor": "",
-        "order": 1,
+        "order": 0,
         "has_js": "false"
     },
     {
@@ -124,7 +124,7 @@
         "category": "atoms",
         "description": "",
         "backgroundColor": "",
-        "order": 3,
+        "order": 4,
         "has_js": "false"
     },
     {
@@ -132,7 +132,7 @@
         "category": "atoms",
         "description": "",
         "backgroundColor": "",
-        "order": 4,
+        "order": 2,
         "has_js": "false"
     },
     {
@@ -140,7 +140,15 @@
         "category": "atoms",
         "description": "",
         "backgroundColor": "",
-        "order": 5,
+        "order": 3,
+        "has_js": "false"
+    },
+    {
+        "component": "menu",
+        "category": "modules",
+        "description": "",
+        "backgroundColor": "",
+        "order": -17,
         "has_js": "false"
     }
 ]

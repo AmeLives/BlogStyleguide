@@ -2,7 +2,7 @@
 
 <h1 class="hl-1">Roboto Light, 30px</h1>
 <h2 class="hl-2">Robote Light, 24px</h2>
-<h3 class="hl-3">Roboto Thin, uppercase, underline, 18px</h3>
+<h3 class="hl-3">Roboto Thin 18px</h3>
 <h3 class="hl-3 section-headline"><span>Roboto Thin, uppercase, underline, 18px</span></h3>
 <h4 class="hl-4">Roboto Regular, 16px</h4>
 
